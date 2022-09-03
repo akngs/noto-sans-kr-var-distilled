@@ -1,6 +1,6 @@
 # noto-sans-kr-var-distilled
 
-용량을 0.3MB로 줄인 노토산스 KR 가변 폰트
+용량을 0.3MB로 줄인 노토산스 KR 가변 폰트. [링크](./NotoSansKR-VF-distilled.woff2)
 
 Google Fonts에서 제공하는 [NotoSansKR-VF.ttf](https://github.com/googlefonts/noto-cjk/blob/main/Sans/Variable/TTF/Subset/NotoSansKR-VF.ttf)를 아래 단계에 따라 줄였습니다.
 
