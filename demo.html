@@ -12,11 +12,11 @@
         }
 
         .playground {
-            --weight: 400;
+            --weight: 100;
 
             font-family: 'Noto Sans KR Distilled', sans-serif;
             font-variation-settings: 'wght' var(--weight);
-            font-size: 3rem;
+            font-size: 2rem;
         }
     </style>
     <script>
@@ -32,9 +32,11 @@
     </script>
 </head>
 <body>
-    <p class="playground">
-        안녕? Hello
-    </p>
-    <input type="range" min="100" max="900" value="400" step="10" id="weight">
+    <div class="playground">
+        <p>동틀 녘 햇빛 포개짐.</p>
+        <p>The quick brown fox jumps over the lazy dog.</p>
+        <p>1234567890</p>
+    </div>
+    <input type="range" min="100" max="900" value="100" step="10" id="weight">
 </body>
 </html>
