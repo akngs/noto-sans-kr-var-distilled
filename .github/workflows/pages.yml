@@ -4,7 +4,7 @@ name: Deploy to Github Pages
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: [$default-branch]
+    branches: [main]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -21,7 +21,10 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -31,16 +34,9 @@ jobs:
         with:
           python-version: '3.10'
       - name: Install dependencies
-        run: apt-get install -y woff2 && pip install fonttools
+        run: sudo apt-get install -y woff2 && pip install fonttools
       - name: Build
         run: make
-
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
